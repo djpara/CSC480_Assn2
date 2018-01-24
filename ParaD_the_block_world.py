@@ -22,7 +22,6 @@ class block_world:
                 successor_states = []
                 s = stack()
 
-##                shuffle(self.block_columns)
                 for i in self.block_columns:
                         index_i = self.block_columns.index(i)
                         if len(i) > 1:
@@ -73,6 +72,7 @@ class block_world:
                 top = blocks[:1]
                 return [bottom, top]
 
+################ TESTING ################
 
 ##bw = block_world(['a','b','c'])
 ##bw = block_world(['ab','c'])

@@ -1,9 +1,5 @@
 from random import shuffle
 
-#from eight_puzzle_state import *
-#from pegs_state import *
-#from jealous_state import *
-
 from ParaD_the_block_world import *
 
 # a general search function that is given a start state, a goal state,
@@ -26,8 +22,6 @@ def search(start, goal, strategy, max_states, states_so_far=0):
             print('defeat')
             return states_so_far
         elif state in already_visited:
-#            return
-#            print('skip')
             print(state)
             pass
         else:
@@ -68,7 +62,9 @@ def compare(strategies, easiest=1, hardest=10, trials=10, max_states=10000):
 
 start = block_world(['a','b','c'])
 goal = block_world(['bca'])
-strategy = 'bfs'
+strategy = 'dfs'
+##strategy = 'bfs'
+##strategy = 'best'
 max_states = 30
 
 search(start, goal, strategy, max_states)
